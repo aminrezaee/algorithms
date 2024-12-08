@@ -32,8 +32,6 @@ class Solution(object):
                 
     def fill_spaces(self, chosen_words:list[str] , maxWidth , is_ended:bool):
         needed_spaces = maxWidth - sum([len(word) for word in chosen_words])
-        print(chosen_words)
-        print(needed_spaces)
         places = [i for i in range(len(chosen_words)) if len(chosen_words[i]) == 0]
         remaining_spaces = needed_spaces % len(places) if not is_ended else 0
         required_spaces = [needed_spaces/len(places) for i in range(len(places))]
